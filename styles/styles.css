@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transition-time-and-fun: .5s ease-in-out;
+}
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --transition-time-and-fun: .3s ease-in-out;
+  }
+}
+span {
+  display: block;
+}
+
+.container {
+  display: flex;
+  margin-top: 5rem;
+  transition: top var(--transition-time-and-fun), left var(--transition-time-and-fun), position var(--transition-time-and-fun);
+}
+
+.container.active {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  left: 10%;
+}
+
+.text-span {
+  --animation-time: 7.5s;
+  font-size: 3rem;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform var(--transition-time-and-fun), left var(--transition-time-and-fun);
+}
+
+.text-span.active {
+  left: 10%;
+  transform: translateX(0);
+  background-size: cover;
+  transition: transform var(--transition-time-and-fun), left var(--transition-time-and-fun);
+  color: black;
+  font-size: 2rem;
+}
+
+.wrapper {
+  display: inline;
+  opacity: 1;
+  transition: width var(--transition-time-and-fun), opacity var(--transition-time-and-fun), transform var(--transition-time-and-fun);
+}
+
+.wrapper.active {
+  width: 0 !important;
+  opacity: 0;
+  transform: translateY(-100%);
+}/*# sourceMappingURL=styles.css.map */
